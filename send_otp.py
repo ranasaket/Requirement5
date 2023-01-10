@@ -9,7 +9,7 @@ def lambda_handler(event, context):
     print('otps: ',paswd)
     number=str(event['queryStringParameters']['mobile'])
     print("Mobile number is :",number)
-    message= f"Your OTPs for mobile number verification is: {paswd}"
+    message= f"Your OTP for mobile number verification is: {paswd}"
     try:
         ress= sms_client.publish(
         PhoneNumber=number,
